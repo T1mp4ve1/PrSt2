@@ -1,1 +1,146 @@
-/* Your styles here */
+/* GENERAL */
+a {
+    text-decoration: none;
+    color: #226dc9;
+    padding-left: 1%;
+}
+
+p,
+h2,
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* BODY */
+#body-div {
+    text-align: center;
+    background-color: rgb(234, 241, 250);
+
+}
+
+/* HEAD */
+#header-div {
+    background-color: #232F3E;
+    padding: 0.5%;
+    text-align: left;
+}
+
+#header-div img {
+    width: 10%;
+}
+
+/* NAV */
+#nav-div {
+    background-color: #485769;
+    text-align: left;
+    padding: 0.7%;
+}
+
+#nav-div p {
+    color: white;
+    display: inline;
+
+}
+
+#nav-div a {
+    color: white;
+}
+
+/* MAIN */
+#main-div {
+    text-align: center;
+    width: 95%;
+    margin: auto;
+}
+
+/* SECTION-1 */
+#section-1-div {
+    color: rgb(235, 232, 232);
+}
+
+#Shop_All {
+    background-color: rgb(252, 92, 33);
+}
+
+#Shop_All p {
+    padding: 0.5%;
+}
+
+#Holiday_Gift_1 h2 {
+    margin: 0;
+    background-image: url("../img/bg-image.png");
+    background-size: 80% 100%;
+    background-position: center;
+    /* background-size: contain; */
+    padding: 5%;
+    padding-bottom: 0;
+}
+
+#Holiday_Gift_1 h4 {
+    margin: 0;
+    background-image: url("../img/bg-image.png");
+    background-size: 75% 100%;
+    background-position: center;
+    /* background-size: contain; */
+    padding: 3%;
+    padding-top: 0;
+
+}
+
+/* SECTION-2 */
+#section-2-div {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 1%;
+}
+
+#section-2-div p {
+    text-align: left;
+    padding: 1%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.Find-img-1 {
+    display: inline-block;
+    padding: 0;
+    width: 20%;
+    margin: 1% 2%;
+}
+
+.Find-img-1 img {
+    border-radius: 30px;
+    height: 10%;
+    width: 100%;
+    box-shadow: 1px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* SECTION-3 */
+#section-3-div img {
+    width: 100%;
+}
+
+#section-3-div p {
+    margin-top: 0;
+}
+
+/* FOOTER */
+#footer-div-1 a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+#footer-div-1 {
+    padding: 1%;
+    background-color: #485769;
+}
+
+#footer-div-2 {
+    background-color: #232F3E;
+    padding: 5%;
+}
