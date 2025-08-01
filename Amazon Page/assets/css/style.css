@@ -10,7 +10,7 @@ a {
     font-weight: 600;
     font-size: 1.2rem;
     text-decoration: none;
-    color: #0a647a;
+    color: #167d97;
     padding-left: 1%;
 }
 
@@ -129,6 +129,10 @@ a {
 }
 
 /* FOOTER */
+#footer-div {
+width: 100%;
+}
+
 #footer-div-1 a {
     color: white;
     font-size: 1.2rem;
@@ -142,9 +146,9 @@ a {
 
 #footer-div-2 {
     background-color: #232F3E;
-    padding: 5%;
+    padding: 3% 0%;
 }
 
 #footer-div-2 img {
-    width: 10%;
+    width: 12%;
 }
