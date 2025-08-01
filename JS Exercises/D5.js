@@ -167,27 +167,24 @@ console.log("");
 console.log("___Esercizio_10___");
 
 const charactersArray = ["g", "n", "u", "z", "d"];
-
 const positionsArray = [];
+const sorted = [...charactersArray].sort();
 
-charactersArray.forEach((char) => {
+for (let x = 0; x < sorted.length; x++) {
+  const char = sorted[x];
+  let position;
+
   switch (char) {
-    case "d":
-      positionsArray.push(4);
-      break;
-    case "g":
-      positionsArray.push(7);
-      break;
-    case "n":
-      positionsArray.push(14);
-      break;
-    case "u":
-      positionsArray.push(21);
-      break;
-    case "z":
-      positionsArray.push(26);
-      break;
+    case "d": position = 4; break;
+    case "g": position = 7; break;
+    case "n": position = 14; break;
+    case "u": position = 21; break;
+    case "z": position = 26; break;
+    default: position = -1;
   }
-});
 
-console.log(positionsArray);
+  positionsArray.push(position);
+}
+
+console.log("Caratteri ordinati:", sorted);
+console.log("Posizioni ordinate:", positionsArray);
