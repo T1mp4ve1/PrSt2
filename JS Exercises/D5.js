@@ -188,7 +188,7 @@ const alfa = [
   "a", "b", "c", "d", "e", "f", "g", "h", "i", "l", "m", "n", "o", "p", "q", "r","s", "t", "u", "v", "z"
 ];
 
-const alfaPos = [
+const alfaNum = [
   "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16","17", "18", "19", "20", "21"
 ];
 
@@ -196,7 +196,7 @@ const charactersNum = [];
 
 function alfaFun(poz) {
   for (let x = 0; x < alfa.length; x++) {
-    let numPoz = alfaPos[x];
+    let numPoz = alfaNum[x];
     if (poz === alfa[x]) {
       return numPoz;
     }
