@@ -23,7 +23,7 @@ for (let x = 0; x < pets.length; x++) {
 console.log("");
 console.log("___Esercizio_2___");
 
-let petsAlfa = pets.slice(0);
+let petsAlfa = structuredClone(pets);
 petsAlfa.sort();
 console.log(petsAlfa);
 
@@ -33,7 +33,7 @@ console.log(petsAlfa);
 console.log("");
 console.log("___Esercizio_3___");
 
-let petsInv = pets.slice(0);
+let petsInv = structuredClone(pets);
 petsInv.reverse();
 console.log(petsInv);
 
@@ -43,7 +43,7 @@ console.log(petsInv);
 console.log("");
 console.log("___Esercizio_4___");
 
-let petsUlt = pets.slice();
+let petsUlt = structuredClone(pets);
 console.log("Prima:", pets);
 petsUlt.splice(0, 1);
 petsUlt.push(pets[0]);
@@ -76,18 +76,28 @@ const cars = [
   },
 ];
 
-let RandomNumArray = [];
-for (let x = 0; x < 5; x++) {
-  let RandomNum = Math.floor(Math.random() * 9);
-  RandomNumArray.push(RandomNum);
-}
-let NamberLic = parseInt(RandomNumArray.join(""));
-console.log(NamberLic);
-
 let mycarsarray = structuredClone(cars);
-mycarsarray.forEach((car, index) => {
-  car.licensePlate = NamberLic + index;
-});
+
+function l1() {
+  let alfab = "qwertyuioplkjhgfdsazxcvbnmm";
+  let rl = Math.floor(Math.random() * alfab.length);
+  let rl2 = Math.floor(Math.random() * alfab.length);
+  return alfab[rl] + alfab[rl2];
+}
+
+function l2() {
+  let alfab = "qwertyuioplkjhgfdsazxcvbnm";
+  let rl = Math.floor(Math.random() * alfab.length);
+  let rl2 = Math.floor(Math.random() * alfab.length);
+  return alfab[rl] + alfab[rl2];
+}
+
+for (y = 0; y < mycarsarray.length; y++) {
+  let m1 = Math.floor(Math.random() * 10).toString();
+  let m2 = Math.floor(Math.random() * 10).toString();
+  let m3 = Math.floor(Math.random() * 10).toString();
+  mycarsarray[y].licensePlate = l1() + m1 + m2 + m3 + l2();
+}
 console.log(mycarsarray);
 
 /* ESERCIZIO 6
@@ -101,13 +111,18 @@ let Trimless = structuredClone(cars);
 Trimless.push({
   brand: "Dacia",
   model: "Sandero",
-  color: "white",
+  color: "White",
   trims: ["Cosa", "Mettere", "Qua"],
 });
 
-Trimless.forEach((car) => {
-  car.trims.pop();
-});
+let x = 0;
+while (x < Trimless.length) {
+  Trimless[x].trims.pop();
+  x++;
+}
+// Trimless.forEach((car) => {
+//   car.trims.pop();
+// });
 
 console.log(Trimless);
 
@@ -134,7 +149,7 @@ for (let x = 0; x < cars.length; x++) {
   let FirstLetter = cars[x].color[0];
   if (FirstLetter === "B" || FirstLetter === "b") {
     console.log("Fuzz");
-  }  else {
+  } else {
     console.log("Buzz");
   }
 }
@@ -149,13 +164,14 @@ const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ];
 
-let y = 0;
-while (y < numericArray.length) {
-  console.log(numericArray[y]);
-  if (numericArray[y] === 32) {
+let z = 0;
+while (z < numericArray.length) {
+  console.log(numericArray[z]);
+  if (numericArray[z] === 32) {
+    console.log("Trovato!");
     break;
   }
-  y++;
+  z++;
 }
 
 /* ESERCIZIO 10
@@ -167,24 +183,47 @@ console.log("");
 console.log("___Esercizio_10___");
 
 const charactersArray = ["g", "n", "u", "z", "d"];
-const positionsArray = [];
-const sorted = [...charactersArray].sort();
 
-for (let x = 0; x < sorted.length; x++) {
-  const char = sorted[x];
-  let position;
+const alfa = [
+  "a", "b", "c", "d", "e", "f", "g", "h", "i", "l", "m", "n", "o", "p", "q", "r","s", "t", "u", "v", "z"
+];
 
-  switch (char) {
-    case "d": position = 4; break;
-    case "g": position = 7; break;
-    case "n": position = 14; break;
-    case "u": position = 21; break;
-    case "z": position = 26; break;
-    default: position = -1;
+const alfaPos = [
+  "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16","17", "18", "19", "20", "21"
+];
+
+const charactersNum = [];
+
+function alfaFun(poz) {
+  for (let x = 0; x < alfa.length; x++) {
+    let numPoz = alfaPos[x];
+    if (poz === alfa[x]) {
+      return numPoz;
+    }
   }
-
-  positionsArray.push(position);
 }
 
-console.log("Caratteri ordinati:", sorted);
-console.log("Posizioni ordinate:", positionsArray);
+for (let x = 0; x < charactersArray.length; x++) {
+let numPositin = alfaFun(charactersArray[x])
+let letter = charactersArray[x];
+// console.log(poz)
+
+  switch (letter) {
+    case "g":
+    charactersNum.push(numPositin);
+    break;
+    case "n":
+    charactersNum.push(numPositin);
+    break;
+    case "u":
+    charactersNum.push(numPositin);
+    break;
+    case "z":
+    charactersNum.push(numPositin);
+    break;
+    case "d":
+    charactersNum.push(numPositin);
+    break;
+  }
+}
+console.log(charactersNum)
