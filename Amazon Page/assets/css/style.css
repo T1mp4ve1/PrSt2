@@ -33,20 +33,31 @@ a {
 }
 
 /* NAV */
+#nav {
+    /* padding: 100px; */
+    background-size: 100%;
+}
+
 #nav-div {
     background-color: #485769;
     text-align: left;
-    padding: 0.7%;
+    padding: 1%;
 }
 
 #nav-div p {
-    color: white;
     display: inline;
-
+    padding: 0;
 }
 
 #nav-div a {
     color: white;
+    padding-right: 1%;
+}
+
+#nav-div p:hover {
+    background-color: #424f60;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 /* MAIN */
@@ -130,7 +141,7 @@ a {
 
 /* FOOTER */
 #footer-div {
-width: 100%;
+    width: 100%;
 }
 
 #footer-div-1 a {
